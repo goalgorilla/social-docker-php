@@ -7,3 +7,5 @@ RUN set -x && apt-get update && \
   apt-get clean && \
   docker-php-ext-install zip sockets bcmath && \
   docker-php-ext-enable sockets bcmath
+
+RUN rm -rf $DOCROOT/../html.original $DOCROOT
