@@ -8,6 +8,8 @@ RUN set -x && apt-get update && \
   docker-php-ext-install zip sockets bcmath && \
   docker-php-ext-enable sockets bcmath
 
+RUN ln -s /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled/rewrite.load
+
 RUN echo "memory_limit = 512M" >> /usr/local/etc/php/conf.d/my-php.ini
 
 RUN rm -rf $DOCROOT/../html.original $DOCROOT
