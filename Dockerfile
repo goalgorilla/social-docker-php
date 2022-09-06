@@ -1,4 +1,4 @@
-FROM tugboatqa/php:7.4-apache
+FROM tugboatqa/php:8.0-apache
 
 ENV COMPOSER_MEMORY_LIMIT=-1
 
